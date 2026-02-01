@@ -18,4 +18,6 @@
 ---
 [![](https://visitcount.itsvg.in/api?id=zetrusTL&icon=0&color=0)](https://visitcount.itsvg.in)
 
+[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=zetrusTL)](https://git.io/streak-stats)
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
