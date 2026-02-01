@@ -1,7 +1,7 @@
 ## ✌️ Hi! I`m Timur 
 
 
-  🙇  Junior backend-developer. <br/>
+  🙇 Backend-developer. <br/>
   😼 Highly motivated to break into big tech. Eager to tackle challenges and continuously learn. <br/>
 
 
