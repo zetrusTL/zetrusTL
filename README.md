@@ -45,7 +45,32 @@ Backend service for wallet balance management.
 - Concurrent E2E test with parallel HTTP requests
 - Dockerized application with migrations
 
-Repository: *(link your wallet repo here)*
+Repository: *(https://github.com/zetrusTL/walletService)*
+
+### Rogue Terminal Game
+
+Terminal roguelike game with procedural dungeon generation.
+
+**Stack:** Go, tcell, Clean Architecture, JSON persistence
+
+**Implemented:**
+
+- Procedural dungeon generation with rooms and corridors
+- Fog of war system with explored / visible tiles
+- Turn-based movement and combat
+- Inventory system (weapons, food, elixirs, scrolls, keys)
+- Color-coded doors and keys logic
+
+**Special enemy mechanics:**
+- Ghosts (invisibility)
+- Mimics (item disguise)
+- Player stats tracking (gold, level, kills, steps, consumables)
+- Leaderboard and session statistics
+- Save / Load game state (JSON repository)
+- Game Over / Victory screens with restart flow
+- Keyboard-driven terminal UI
+
+Repository: *(https://github.com/zetrusTL/rogue_zetrusTL)*
 
 ---
 
