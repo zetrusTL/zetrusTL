@@ -31,19 +31,21 @@ Currently focused on Go, PostgreSQL and REST APIs.
 
 ### Wallet Service
 
-Backend service for wallet balance management.
+Микросервисная backend-система для управления кошельками и обработки транзакций в event-driven архитектуре.
 
-**Stack:** Go, PostgreSQL, REST, Docker
+**Stack:**  Go, PostgreSQL, MongoDB, Kafka, gRPC, REST, Docker Compose
 
 **Implemented:**
 
-- REST API for balance and wallet operations (DEPOSIT / WITHDRAW)
-- Layered architecture (handler / service / repository)
-- Atomic balance updates in PostgreSQL (no race conditions)
-- Domain error handling (404 / 409 / 400)
-- Unit tests for business logic
-- Concurrent E2E test with parallel HTTP requests
-- Dockerized application with migrations
+- REST API с JWT-аутентификацией (register / login / balance / deposit / withdraw / exchange)
+- gRPC-сервис курсов валют с кэшированием
+- Атомарные обновления баланса в PostgreSQL (без race conditions)
+- Публикация крупных транзакций в Kafka
+- Надёжный producer с retry и exponential backoff
+- Idempotent Kafka consumer с записью в MongoDB (уникальный индекс)
+- Гарантия доставки at-least-once
+- Health-check endpoints и graceful shutdown
+- Полная Docker-оркестрация нескольких сервисов
 
 Repository: *(https://github.com/zetrusTL/walletService)*
 
