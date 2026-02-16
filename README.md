@@ -31,7 +31,7 @@ Currently focused on Go, PostgreSQL and REST APIs.
 
 ### Wallet Service
 
-Микросервисная backend-система для управления кошельками и обработки транзакций в event-driven архитектуре.
+Микросервисная backend-система для управления кошельками, обработки транзакций в event-driven архитектуре и потоковой обработки событий с агрегацией в реальном времени.
 
 **Stack:**  Go, PostgreSQL, MongoDB, Kafka, gRPC, REST, Docker Compose
 
@@ -46,7 +46,18 @@ Currently focused on Go, PostgreSQL and REST APIs.
 - Гарантия доставки at-least-once
 - Health-check endpoints и graceful shutdown
 - Полная Docker-оркестрация нескольких сервисов
-
+- Генератор событий с режимами нагрузки (regular / burst / night)
+- Синхронная, асинхронная и batch отправка в Kafka
+- Retry с exponential backoff
+- Разные стратегии партиционирования (key / round-robin / random)
+- Агрегирующий consumer (batch + time-based + hybrid)
+- Manual offset commits (at-least-once delivery)
+- Dead Letter Queue (Kafka + ClickHouse)
+- Реалтайм агрегации через AggregatingMergeTree и Materialized Views
+- Hourly rollups из минутных окон
+- Retry-safe вставки в ClickHouse
+- Dockerized multi-service orchestration
+- 
 Repository: *(https://github.com/zetrusTL/walletService)*
 
 ### Rogue Terminal Game
